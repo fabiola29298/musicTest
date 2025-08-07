@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Clock, MapPin, Monitor, Home, Check } from 'lucide-react'
+import {  Monitor, Home, Check } from 'lucide-react'
 
 export default function CursosPage() {
   return (
