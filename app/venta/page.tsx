@@ -14,7 +14,7 @@ export default function VentaPage() {
       category: "Armónicas",
       rating: 4.8,
       reviews: 124,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/imgs/banner-gral.jpg",
       description: "Armónica diatónica profesional en Do mayor. Ideal para blues, folk y rock.",
       inStock: true,
       featured: true
@@ -27,7 +27,7 @@ export default function VentaPage() {
       category: "Teclados",
       rating: 4.9,
       reviews: 89,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/imgs/banner-gral.jpg?height=300&width=300",
       description: "Teclado de 61 teclas con 622 voces y 205 estilos. Perfecto para principiantes.",
       inStock: true,
       featured: true
@@ -40,7 +40,7 @@ export default function VentaPage() {
       category: "Estuches",
       rating: 4.7,
       reviews: 67,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/imgs/banner-gral.jpg?height=300&width=300",
       description: "Estuche rígido con interior acolchado. Máxima protección para tu violín.",
       inStock: true
     },
@@ -52,7 +52,7 @@ export default function VentaPage() {
       category: "Cuerdas",
       rating: 4.6,
       reviews: 203,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/imgs/banner-gral.jpg?height=300&width=300",
       description: "Juego de cuerdas de bronce fosforado para guitarra acústica. Calibre light.",
       inStock: true
     },
@@ -64,7 +64,7 @@ export default function VentaPage() {
       category: "Armónicas",
       rating: 4.9,
       reviews: 45,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/imgs/banner-gral.jpg?height=300&width=300",
       description: "Armónica cromática de 12 agujeros. Sonido profesional para jazz y clásico.",
       inStock: false
     },
@@ -76,7 +76,7 @@ export default function VentaPage() {
       category: "Teclados",
       rating: 4.5,
       reviews: 78,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/imgs/banner-gral.jpg?height=300&width=300",
       description: "Teclado de 61 teclas con tecnología AiX Sound Source. 600 tonos incluidos.",
       inStock: true
     },
@@ -88,7 +88,7 @@ export default function VentaPage() {
       category: "Estuches",
       rating: 4.4,
       reviews: 156,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/imgs/banner-gral.jpg?height=300&width=300",
       description: "Funda acolchada con correas ajustables. Bolsillo frontal para accesorios.",
       inStock: true
     },
@@ -100,7 +100,7 @@ export default function VentaPage() {
       category: "Cuerdas",
       rating: 4.7,
       reviews: 92,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/imgs/banner-gral.jpg?height=300&width=300",
       description: "Juego completo de cuerdas para violín 4/4. Sonido brillante y duradero.",
       inStock: true
     }

@@ -26,7 +26,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center space-x-2">
            
             <Music className="h-8 w-8 text-teal-600 dark:text-teal-400" />
-            <span className="text-xl font-bold text-teal-600 dark:text-teal-400">Vibrato Academia</span>
+            <span className="text-xl font-bold text-teal-600 dark:text-teal-400">Vibrato Bolivia</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -26,7 +26,7 @@ export default function CursosPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Image
-                  src="/violin-student-teacher.png"
+                  src="/imgs/banner-gral.jpg"
                   alt="Curso de violín"
                   width={500}
                   height={400}
@@ -81,7 +81,7 @@ export default function CursosPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="md:order-2">
                 <Image
-                  src="/singing-lesson.png"
+                  src="/imgs/banner-gral.jpg"
                   alt="Curso de canto"
                   width={500}
                   height={400}
@@ -130,7 +130,7 @@ export default function CursosPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Image
-                  src="/guitar-lesson-acoustic-electric.png"
+                  src="/imgs/banner-gral.jpg"
                   alt="Curso de guitarra"
                   width={500}
                   height={400}
@@ -184,7 +184,7 @@ export default function CursosPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Precios</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card> {/* Las Cards de Shadcn ya son adaptativas */}
+            <Card> 
               <CardHeader className="text-center">
                
                 <Monitor className="w-12 h-12 mx-auto text-teal-600 dark:text-teal-400 mb-4" />
@@ -192,13 +192,13 @@ export default function CursosPage() {
                 <CardDescription>Aprende desde la comodidad de tu hogar</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <div className="text-4xl font-bold text-teal-600 dark:text-teal-400 mb-4">$25/hora</div>
+                <div className="text-4xl font-bold text-teal-600 dark:text-teal-400 mb-4">70 Bs/hora</div>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center justify-center gap-2">
                     <Check className="w-4 h-4 text-green-600 dark:text-green-500" />
                     <span>Clases individuales</span>
                   </li>
-                  {/* ... (los otros checks ya se adaptan) ... */}
+                   
                 </ul>
                 <Button className="w-full bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white dark:text-slate-900">
                   Reservar Clase Online
@@ -217,7 +217,7 @@ export default function CursosPage() {
                 <CardDescription>Profesor en tu hogar (La Paz)</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <div className="text-4xl font-bold text-teal-600 dark:text-teal-400 mb-4">$35/hora</div>
+                <div className="text-4xl font-bold text-teal-600 dark:text-teal-400 mb-4">100 Bs/hora</div>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center justify-center gap-2">
                     <Check className="w-4 h-4 text-green-600 dark:text-green-500" />
@@ -230,6 +230,8 @@ export default function CursosPage() {
                 </Button>
               </CardContent>
             </Card>
+
+            
           </div>
         </div>
       </section>

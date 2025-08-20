@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Vibrato Academia de Música Online",
+  title: "Vibrato Academia de Musica Online Bolivia",
   description: "Aprende música online y a domicilio con los mejores profesores. Clases de violín, canto y guitarra en La Paz, Bolivia.",
 }
 

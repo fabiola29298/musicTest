@@ -13,7 +13,7 @@ export default function CulturaPage() {
       excerpt: "Celebra el día de La Paz con increíbles presentaciones musicales en toda la ciudad. Conciertos, recitales y actividades culturales.",
       date: "2024-08-06",
       category: "Eventos",
-      image: "/la-paz-music-festival.png",
+      image: "/imgs/banner-gral.jpg",
       featured: true
     },
     {
@@ -22,7 +22,7 @@ export default function CulturaPage() {
       excerpt: "No te pierdas los mejores eventos musicales del fin de semana. Desde jazz hasta música folclórica boliviana.",
       date: "2024-08-10",
       category: "Eventos",
-      image: "/bolivia-music-weekend.png",
+      image: "/imgs/banner-gral.jpg",
       featured: true
     },
     {
@@ -31,7 +31,7 @@ export default function CulturaPage() {
       excerpt: "Descubre la riqueza cultural de Bolivia a través de sus ritmos tradicionales y cómo influyen en la educación musical moderna.",
       date: "2024-08-05",
       category: "Cultura",
-      image: "/bolivian-folk-instruments.png"
+      image: "/imgs/banner-gral.jpg"
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ export default function CulturaPage() {
       excerpt: "Explora las ventajas de la educación musical virtual y cómo la tecnología está revolucionando el aprendizaje musical.",
       date: "2024-08-03",
       category: "Educación",
-      image: "/placeholder.svg?height=200&width=300"
+      image: "/imgs/banner-gral.jpg"
     },
     {
       id: 5,
@@ -47,16 +47,8 @@ export default function CulturaPage() {
       excerpt: "Aprende las técnicas fundamentales de respiración que todo cantante debe dominar para mejorar su rendimiento vocal.",
       date: "2024-08-01",
       category: "Técnica",
-      image: "/placeholder.svg?height=200&width=300"
+      image: "/imgs/banner-gral.jpg"
     },
-    {
-      id: 6,
-      title: "Historia del Violín en Bolivia",
-      excerpt: "Un recorrido por la historia del violín en Bolivia y su influencia en la música académica y popular del país.",
-      date: "2024-07-28",
-      category: "Historia",
-      image: "/placeholder.svg?height=200&width=300"
-    }
   ]
 
   const featuredPosts = blogPosts.filter(post => post.featured)

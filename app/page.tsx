@@ -15,7 +15,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Vibrato Academia de Música Online
+                Vibrato Academia de Musica Online Bolivia
               </h1>
               <p className="text-xl mb-8">
                 Aprende música desde casa o en persona con nuestros profesores expertos. 
@@ -33,7 +33,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/music-teacher.png"
+                src="/imgs/banner-gral.jpg"
                 alt="Profesor de música con instrumentos"
                 width={500}
                 height={400}
@@ -56,7 +56,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Flexibilidad total: aprende desde casa o recibe clases a domicilio
+                  Flexibilidad total: aprende desde casa o recibe clases a domicilio. Sin límites de edad.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -108,7 +108,7 @@ export default function HomePage() {
            <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Image
-                  src="/violin-lessons.png"
+                  src="/imgs/banner-gral.jpg"
                   alt="Clases de violín"
                   width={300}
                   height={200}
@@ -127,7 +127,7 @@ export default function HomePage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Image
-                  src="/singing-lessons-microphone.png"
+                  src="/imgs/banner-gral.jpg"
                   alt="Clases de canto"
                   width={300}
                   height={200}
@@ -146,7 +146,7 @@ export default function HomePage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Image
-                  src="/acoustic-guitar-lesson.png"
+                  src="/imgs/banner-gral.jpg"
                   alt="Clases de guitarra"
                   width={300}
                   height={200}
@@ -177,7 +177,7 @@ export default function HomePage() {
        <section className="bg-teal-600 dark:bg-teal-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">¿Listo para comenzar tu viaje musical?</h2>
-          <p className="text-xl mb-8">Reserva tu primera clase gratuita y descubre tu potencial musical</p>
+          <p className="text-xl mb-8">Reserva tu diagnóstico gratuito de 15 min online, a una llamada. </p>
           <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100">
             Reservar Clase Gratuita
           </Button>
