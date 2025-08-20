@@ -108,11 +108,12 @@ export default function VentaPage() {
 
   const categories = ["Todos", "Armónicas", "Teclados", "Estuches", "Cuerdas"]
   const featuredProducts = products.filter(product => product.featured)
-
+  
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
+      
+      <section className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Tienda Musical</h1>
           <p className="text-xl">Instrumentos y accesorios de calidad para tu aprendizaje musical</p>
@@ -120,28 +121,31 @@ export default function VentaPage() {
       </section>
 
       {/* Features */}
-      <section className="py-8 bg-gray-50">
+      
+      <section className="py-8 bg-muted">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="flex items-center justify-center gap-3">
-              <Truck className="w-8 h-8 text-purple-600" />
+            
+              <Truck className="w-8 h-8 text-teal-600 dark:text-teal-400" />
               <div>
-                <h3 className="font-semibold">Envío Gratuito</h3>
-                <p className="text-sm text-gray-600">En compras mayores a $50</p>
+                <h3 className="font-semibold text-foreground">Envío Gratuito</h3>
+              
+                <p className="text-sm text-muted-foreground">En compras mayores a $50</p>
               </div>
             </div>
             <div className="flex items-center justify-center gap-3">
-              <Shield className="w-8 h-8 text-purple-600" />
+              <Shield className="w-8 h-8 text-teal-600 dark:text-teal-400" />
               <div>
-                <h3 className="font-semibold">Garantía</h3>
-                <p className="text-sm text-gray-600">1 año en todos los productos</p>
+                <h3 className="font-semibold text-foreground">Garantía</h3>
+                <p className="text-sm text-muted-foreground">1 año en todos los productos</p>
               </div>
             </div>
             <div className="flex items-center justify-center gap-3">
-              <Star className="w-8 h-8 text-purple-600" />
+              <Star className="w-8 h-8 text-teal-600 dark:text-teal-400" />
               <div>
-                <h3 className="font-semibold">Calidad Premium</h3>
-                <p className="text-sm text-gray-600">Solo marcas reconocidas</p>
+                <h3 className="font-semibold text-foreground">Calidad Premium</h3>
+                <p className="text-sm text-muted-foreground">Solo marcas reconocidas</p>
               </div>
             </div>
           </div>
@@ -162,44 +166,30 @@ export default function VentaPage() {
                       alt={product.name}
                       width={300}
                       height={300}
-                      className="w-full h-64 object-cover"
+                      className="w-full h-full object-cover"
                     />
-                    <Badge className="absolute top-4 left-4 bg-red-600">
-                      Oferta
-                    </Badge>
+                    <Badge className="absolute top-4 left-4 bg-red-600 text-white">Oferta</Badge>
                     {!product.inStock && (
-                      <Badge className="absolute top-4 right-4 bg-gray-600">
-                        Agotado
-                      </Badge>
+                      <Badge variant="secondary" className="absolute top-4 right-4">Agotado</Badge>
                     )}
                   </div>
-                  <div className="p-6">
-                    <Badge className="mb-2">{product.category}</Badge>
+                  <div className="p-6 flex flex-col justify-center">
+                    <Badge variant="secondary" className="w-fit mb-2">{product.category}</Badge>
                     <h3 className="text-xl font-bold mb-2">{product.name}</h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center">
                         {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${
-                              i < Math.floor(product.rating)
-                                ? "fill-yellow-400 text-yellow-400"
-                                : "text-gray-300"
-                            }`}
-                          />
+                          <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300 dark:text-gray-600"}`} />
                         ))}
                       </div>
-                      <span className="text-sm text-gray-600">({product.reviews})</span>
+                      <span className="text-sm text-muted-foreground">({product.reviews})</span>
                     </div>
-                    <p className="text-gray-600 mb-4">{product.description}</p>
+                    <p className="text-muted-foreground mb-4 text-sm">{product.description}</p>
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-2xl font-bold text-purple-600">${product.price}</span>
-                      <span className="text-lg text-gray-500 line-through">${product.originalPrice}</span>
+                      <span className="text-2xl font-bold text-teal-600 dark:text-teal-400">${product.price}</span>
+                      <span className="text-lg text-muted-foreground line-through">${product.originalPrice}</span>
                     </div>
-                    <Button 
-                      className="w-full bg-purple-600 hover:bg-purple-700"
-                      disabled={!product.inStock}
-                    >
+                    <Button className="w-full bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white dark:text-slate-900" disabled={!product.inStock}>
                       <ShoppingCart className="w-4 h-4 mr-2" />
                       {product.inStock ? "Agregar al Carrito" : "Agotado"}
                     </Button>
@@ -212,19 +202,12 @@ export default function VentaPage() {
       </section>
 
       {/* All Products */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Todos los Productos</h2>
-          
-          {/* Category Filter */}
           <div className="flex flex-wrap gap-2 mb-8">
             {categories.map((category) => (
-              <Button
-                key={category}
-                variant={category === "Todos" ? "default" : "outline"}
-                size="sm"
-                className={category === "Todos" ? "bg-purple-600 hover:bg-purple-700" : ""}
-              >
+              <Button key={category} variant={category === "Todos" ? "default" : "outline"} size="sm" className={category === "Todos" ? "bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white dark:text-slate-900" : ""}>
                 {category}
               </Button>
             ))}
@@ -232,7 +215,7 @@ export default function VentaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product) => (
-              <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
                 <div className="relative">
                   <Image
                     src={product.image || "/placeholder.svg"}
@@ -242,50 +225,35 @@ export default function VentaPage() {
                     className="w-full h-48 object-cover"
                   />
                   {product.originalPrice > product.price && (
-                    <Badge className="absolute top-2 left-2 bg-red-600">
-                      -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
-                    </Badge>
+                    <Badge className="absolute top-2 left-2 bg-red-600 text-white">-{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%</Badge>
                   )}
                   {!product.inStock && (
-                    <Badge className="absolute top-2 right-2 bg-gray-600">
-                      Agotado
-                    </Badge>
+                    <Badge variant="secondary" className="absolute top-2 right-2">Agotado</Badge>
                   )}
                 </div>
                 <CardHeader className="pb-2">
-                  <Badge className="w-fit mb-2">{product.category}</Badge>
+                  <Badge variant="secondary" className="w-fit mb-2">{product.category}</Badge>
                   <CardTitle className="text-lg">{product.name}</CardTitle>
-                  <div className="flex items-center gap-2">
+                </CardHeader>
+                <CardContent className="flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 mb-3">
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`w-3 h-3 ${
-                            i < Math.floor(product.rating)
-                              ? "fill-yellow-400 text-yellow-400"
-                              : "text-gray-300"
-                          }`}
-                        />
+                        <Star key={i} className={`w-3 h-3 ${i < Math.floor(product.rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300 dark:text-gray-600"}`} />
                       ))}
                     </div>
-                    <span className="text-xs text-gray-600">({product.reviews})</span>
+                    <span className="text-xs text-muted-foreground">({product.reviews})</span>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="mb-3 text-sm">
-                    {product.description}
-                  </CardDescription>
+                  <div className="flex-grow">
+                    <CardDescription className="mb-3 text-sm">{product.description}</CardDescription>
+                  </div>
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xl font-bold text-purple-600">${product.price}</span>
+                    <span className="text-xl font-bold text-teal-600 dark:text-teal-400">${product.price}</span>
                     {product.originalPrice > product.price && (
-                      <span className="text-sm text-gray-500 line-through">${product.originalPrice}</span>
+                      <span className="text-sm text-muted-foreground line-through">${product.originalPrice}</span>
                     )}
                   </div>
-                  <Button 
-                    size="sm" 
-                    className="w-full bg-purple-600 hover:bg-purple-700"
-                    disabled={!product.inStock}
-                  >
+                  <Button size="sm" className="w-full bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white dark:text-slate-900" disabled={!product.inStock}>
                     <ShoppingCart className="w-3 h-3 mr-2" />
                     {product.inStock ? "Agregar" : "Agotado"}
                   </Button>
@@ -297,11 +265,11 @@ export default function VentaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-purple-600 text-white py-16">
+      <section className="bg-teal-600 dark:bg-teal-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">¿Necesitas Asesoría?</h2>
           <p className="text-xl mb-8">Nuestros expertos te ayudan a elegir el instrumento perfecto</p>
-          <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
+          <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100">
             Contactar Asesor
           </Button>
         </div>

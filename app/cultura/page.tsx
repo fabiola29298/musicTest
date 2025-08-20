@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, MapPin, Clock, Users } from 'lucide-react'
+import { Input } from "@/components/ui/input"
 
 export default function CulturaPage() {
   const blogPosts = [
@@ -61,10 +62,11 @@ export default function CulturaPage() {
   const featuredPosts = blogPosts.filter(post => post.featured)
   const regularPosts = blogPosts.filter(post => !post.featured)
 
-  return (
+ return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
+     
+      <section className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Cultura Musical</h1>
           <p className="text-xl">Eventos, noticias y contenido cultural sobre el mundo de la música</p>
@@ -86,12 +88,14 @@ export default function CulturaPage() {
                     height={250}
                     className="w-full h-64 object-cover"
                   />
-                  <Badge className="absolute top-4 left-4 bg-red-600">
+                  {/* El Badge rojo para eventos funciona bien en ambos modos */}
+                  <Badge className="absolute top-4 left-4 bg-red-600 text-white">
                     {post.category}
                   </Badge>
                 </div>
                 <CardHeader>
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
+                   
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       <span>{new Date(post.date).toLocaleDateString('es-ES')}</span>
@@ -116,7 +120,8 @@ export default function CulturaPage() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-16 bg-gray-50">
+      
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12">Últimas Publicaciones</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -130,12 +135,13 @@ export default function CulturaPage() {
                     height={200}
                     className="w-full h-48 object-cover"
                   />
-                  <Badge className="absolute top-4 left-4 bg-purple-600">
+                  
+                  <Badge className="absolute top-4 left-4 bg-teal-600 dark:bg-teal-800 text-white dark:text-teal-100">
                     {post.category}
                   </Badge>
                 </div>
                 <CardHeader>
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                     <Calendar className="w-4 h-4" />
                     <span>{new Date(post.date).toLocaleDateString('es-ES')}</span>
                   </div>
@@ -158,24 +164,25 @@ export default function CulturaPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12">Próximos Eventos</h2>
           <div className="space-y-6">
-            <Card className="border-l-4 border-l-purple-600">
+            
+            <Card className="border-l-4 border-l-teal-600 dark:border-l-teal-400">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
                     <CardTitle className="text-xl">Concierto de Estudiantes - Recital de Fin de Mes</CardTitle>
                     <CardDescription>Presentación de nuestros estudiantes más destacados</CardDescription>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-4 text-sm">
+                  <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-purple-600" />
+                      <Calendar className="w-4 h-4 text-teal-600 dark:text-teal-400" />
                       <span>30 de Agosto, 2024</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-purple-600" />
+                      <Clock className="w-4 h-4 text-teal-600 dark:text-teal-400" />
                       <span>19:00 hrs</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-purple-600" />
+                      <MapPin className="w-4 h-4 text-teal-600 dark:text-teal-400" />
                       <span>Teatro Municipal</span>
                     </div>
                   </div>
@@ -183,24 +190,25 @@ export default function CulturaPage() {
               </CardHeader>
             </Card>
 
-            <Card className="border-l-4 border-l-green-600">
+            
+            <Card className="border-l-4 border-l-green-600 dark:border-l-green-500">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
                     <CardTitle className="text-xl">Masterclass de Violín con Maestro Internacional</CardTitle>
                     <CardDescription>Clase magistral abierta al público</CardDescription>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-4 text-sm">
+                  <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-green-600" />
+                      <Calendar className="w-4 h-4 text-green-600 dark:text-green-500" />
                       <span>15 de Septiembre, 2024</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-green-600" />
+                      <Clock className="w-4 h-4 text-green-600 dark:text-green-500" />
                       <span>16:00 hrs</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Users className="w-4 h-4 text-green-600" />
+                      <Users className="w-4 h-4 text-green-600 dark:text-green-500" />
                       <span>Cupos limitados</span>
                     </div>
                   </div>
@@ -212,17 +220,18 @@ export default function CulturaPage() {
       </section>
 
       {/* Newsletter */}
-      <section className="bg-purple-600 text-white py-16">
+     
+      <section className="bg-teal-600 dark:bg-teal-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Mantente Informado</h2>
           <p className="text-xl mb-8">Suscríbete para recibir las últimas noticias y eventos musicales</p>
           <div className="max-w-md mx-auto flex gap-4">
-            <input
+            <Input
               type="email"
               placeholder="Tu email"
-              className="flex-1 px-4 py-2 rounded-lg text-gray-900"
+              className="flex-1 text-foreground"
             />
-            <Button className="bg-white text-purple-600 hover:bg-gray-100">
+            <Button className="bg-white text-teal-600 hover:bg-gray-100">
               Suscribirse
             </Button>
           </div>
