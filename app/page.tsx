@@ -7,8 +7,10 @@ import { Music, Users, Award, Clock } from 'lucide-react'
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
+      
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
+      
+      <section className="relative bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -20,12 +22,13 @@ export default function HomePage() {
                 Clases de violín, canto y guitarra adaptadas a tu ritmo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
+                <Button size="lg" className="bg-white text-teal-600 border-none  hover:bg-gray-100">
                   Reserva tu Primera Clase
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600">
+                <Button size="lg" variant="outline" className="border-0 text-white hover:bg-white hover:text-teal-600">
                   Ver Cursos
-                </Button>
+                </Button> 
+                
               </div>
             </div>
             <div className="relative">
@@ -42,13 +45,13 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">¿Por qué elegir Vibrato Academia?</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <Card className="text-center">
               <CardHeader>
-                <Music className="w-12 h-12 mx-auto text-purple-600 mb-4" />
+                 <Music className="w-12 h-12 mx-auto text-teal-600 dark:text-teal-400 mb-4" />
                 <CardTitle>Clases Online y Presenciales</CardTitle>
               </CardHeader>
               <CardContent>
@@ -60,7 +63,7 @@ export default function HomePage() {
             
             <Card className="text-center">
               <CardHeader>
-                <Users className="w-12 h-12 mx-auto text-purple-600 mb-4" />
+                <Users className="w-12 h-12 mx-auto text-teal-600 dark:text-teal-400 mb-4" />
                 <CardTitle>Profesores Expertos</CardTitle>
               </CardHeader>
               <CardContent>
@@ -72,7 +75,7 @@ export default function HomePage() {
             
             <Card className="text-center">
               <CardHeader>
-                <Award className="w-12 h-12 mx-auto text-purple-600 mb-4" />
+                <Award className="w-12 h-12 mx-auto text-teal-600 dark:text-teal-400 mb-4" />
                 <CardTitle>Método Personalizado</CardTitle>
               </CardHeader>
               <CardContent>
@@ -84,7 +87,7 @@ export default function HomePage() {
             
             <Card className="text-center">
               <CardHeader>
-                <Clock className="w-12 h-12 mx-auto text-purple-600 mb-4" />
+                <Clock className="w-12 h-12 mx-auto text-teal-600 dark:text-teal-400 mb-4" />
                 <CardTitle>Horarios Flexibles</CardTitle>
               </CardHeader>
               <CardContent>
@@ -98,18 +101,18 @@ export default function HomePage() {
       </section>
 
       {/* Courses Preview */}
-      <section className="py-16">
+       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Nuestros Cursos</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+           <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Image
                   src="/violin-lessons.png"
                   alt="Clases de violín"
                   width={300}
                   height={200}
-                  className="rounded-lg mb-4"
+                  className="rounded-t-lg mb-4"
                 />
                 <CardTitle>Curso de Violín</CardTitle>
               </CardHeader>
@@ -117,7 +120,7 @@ export default function HomePage() {
                 <CardDescription className="mb-4">
                   Desde principiante hasta avanzado. Técnica, teoría y repertorio clásico y moderno.
                 </CardDescription>
-                <Button className="w-full">Ver Detalles</Button>
+                <Button className="w-full bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white dark:text-slate-900">Ver Detalles</Button>
               </CardContent>
             </Card>
 
@@ -128,7 +131,7 @@ export default function HomePage() {
                   alt="Clases de canto"
                   width={300}
                   height={200}
-                  className="rounded-lg mb-4"
+                  className="rounded-t-lg mb-4"
                 />
                 <CardTitle>Curso de Canto</CardTitle>
               </CardHeader>
@@ -136,7 +139,7 @@ export default function HomePage() {
                 <CardDescription className="mb-4">
                   Desarrolla tu voz con técnicas profesionales. Respiración, afinación y expresión.
                 </CardDescription>
-                <Button className="w-full">Ver Detalles</Button>
+                <Button className="w-full bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white dark:text-slate-900">Ver Detalles</Button>
               </CardContent>
             </Card>
 
@@ -147,7 +150,7 @@ export default function HomePage() {
                   alt="Clases de guitarra"
                   width={300}
                   height={200}
-                  className="rounded-lg mb-4"
+                  className="rounded-t-lg mb-4"
                 />
                 <CardTitle>Curso de Guitarra</CardTitle>
               </CardHeader>
@@ -155,14 +158,14 @@ export default function HomePage() {
                 <CardDescription className="mb-4">
                   Guitarra acústica y eléctrica. Acordes, escalas y tu estilo musical favorito.
                 </CardDescription>
-                <Button className="w-full">Ver Detalles</Button>
+                <Button className="w-full bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white dark:text-slate-900">Ver Detalles</Button>
               </CardContent>
             </Card>
           </div>
           
           <div className="text-center mt-12">
             <Link href="/cursos">
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+              <Button size="lg" className="bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white dark:text-slate-900">
                 Ver Todos los Cursos
               </Button>
             </Link>
@@ -171,11 +174,11 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-purple-600 text-white py-16">
+       <section className="bg-teal-600 dark:bg-teal-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">¿Listo para comenzar tu viaje musical?</h2>
           <p className="text-xl mb-8">Reserva tu primera clase gratuita y descubre tu potencial musical</p>
-          <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
+          <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100">
             Reservar Clase Gratuita
           </Button>
         </div>
